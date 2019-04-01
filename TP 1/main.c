@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "ingresoUno.h"
-#include "suma.h"
-#include "resta.h"
-#include "division.h"
-#include "multiplicacion.h"
-#include "factorial.h"
+
 
 int main()
 {

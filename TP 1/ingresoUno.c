@@ -1,11 +1,4 @@
 #include "ingresoUno.h"
-int ingresarNumero()
-{
-    int notaIngresada;
-    printf("ingrese un numero :",notaIngresada);
-    scanf("%d", &notaIngresada);
-    return notaIngresada;
-}
 
 
 
