@@ -1,0 +1,2 @@
+
+int ingresarNumero(void);

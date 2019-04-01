@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1554079307 source:c:\users\pipoca\desktop\tp 1\ingresouno.c
+	"ingresoUno.h"
+
+1554074434 c:\users\pipoca\desktop\tp 1\ingresouno.h
+
+1554080626 source:c:\users\pipoca\desktop\tp 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ingresoUno.h"
+	"suma.h"
+	"resta.h"
+	"division.h"
+	"multiplicacion.h"
+	"factorial.h"
+
+1554077556 source:c:\users\pipoca\desktop\tp 1\division.c
+	"division.h"
+
+1554074434 c:\users\pipoca\desktop\tp 1\division.h
+
+1554076638 c:\users\pipoca\desktop\tp 1\suma.h
+
+1554076638 c:\users\pipoca\desktop\tp 1\resta.h
+
+1554076638 source:c:\users\pipoca\desktop\tp 1\resta.c
+	"resta.h"
+
+1554076638 source:c:\users\pipoca\desktop\tp 1\suma.c
+	"suma.h"
+
+1554079398 source:c:\users\pipoca\desktop\tp 1\multiplicacion.c
+	"multiplicacion.h"
+
+1554078672 c:\users\pipoca\desktop\tp 1\multiplicacion.h
+
+1554080561 source:c:\users\pipoca\desktop\tp 1\factorial.c
+	"factorial.h"
+
+1554080443 c:\users\pipoca\desktop\tp 1\factorial.h
+
