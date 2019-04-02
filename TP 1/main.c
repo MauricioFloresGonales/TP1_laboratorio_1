@@ -8,78 +8,113 @@ int main()
     int numeroY;
     int suma;
     int resta;
-    int division;
+    float division;
     int multiplicacion;
-    int factoreo;
+    int factoreoX;
+    int factoreoY;
     int opcion;
     char seguir = 's';
+    int X= 0;
+    int Y= 0;
+    int paso3 =0;
 
       do{
-        printf("1. Ingresar 1er operando(A=x) \n2. Ingresar 2do operando (B=y) \n3. Calcular todas las operaciones.\n4. Informar resultados.\n5. Salir\nElija una opcion:");
+            if(X == 0)
+            {
+                printf("1. Ingresar 1er operando(A=X)\n");
+            }else{
+                printf("1. Ingresar 1er operando(A=%d)\n",numeroX);
+                X= 1;
+            }//if(X == 0)
+
+            if(Y == 0)
+            {
+                printf("2. Ingresar 2do operando(B=Y)\n");
+            }else{
+                printf("2. Ingresar 2do operando(B=%d)\n",numeroY);
+                Y= 1;
+            }//if(Y == 0)
+
+        printf("3. Calcular todas las operaciones.\n4. Informar resultados.\n5. Salir\nElija una opcion:");
+
         scanf("%d", &opcion);
 
         switch(opcion)
         {
         case 1:
             numeroX= ingresarNumero();
+            X=1;
             break;
         case 2:
             numeroY= ingresarNumero();
+            Y=1;
             break;
         case 3:
-            suma= calculoSuma(numeroX, numeroY);
-            resta= calculoResta(numeroX, numeroY);
-            division= calculoDivision(numeroX, numeroY);
-            multiplicacion= calculoMultiplicacion(numeroX,numeroY);
-            factoreo= factorial(numeroX);
+            if(X==0 && Y==0)
+            {
+                printf("NO INGRESASTE (A) NI (B)\n");
+            }else{
+                if(X==0 && Y==1)
+                {
+                    printf("NO INGRESASTE (A)\n");
+                }else{
+                    if(X==1 && Y==0)
+                    {
+                        printf("NO INGRESASTE (B)\n");
+                    }else{
+
+                        printf("a) Calcular la suma (A+B)\nb) Calcular la resta (A-B)\nc) Calcular la division (A/B)\nd) Calcular la multiplicacion (A*B)\ne) Calcular el factorial (A!)\n");
+                        suma= calculoSuma(numeroX, numeroY);
+                        resta= calculoResta(numeroX, numeroY);
+                        division= calculoDivision(numeroX, numeroY);
+                        multiplicacion= calculoMultiplicacion(numeroX,numeroY);
+                        factoreoX= factorial(numeroX);
+                        factoreoY= factorial(numeroY);
+                        paso3=1;
+                    }//if(X==1 && Y==0
+                }//if(X==0 && Y==1)
+            }//if(X==0 && Y==0)
 
             break;
         case 4:
-            printf("la suma es :%d\n", suma);
-            printf("la la resta es :%d\n", resta);
-            printf("la division es :%f\n", division);
-            printf("la multiplicacion es: %d\n", multiplicacion);
-            printf("el resultado del factoreo es: %d\n", factoreo);
+            if(paso3==0)
+            {
+                printf("No calsulaste las operaciones (operacion 3) o te falto agregar un dato.\n");
+
+            }else{
+
+                printf("a)La suma es :%d\n", suma);
+
+                printf("b)La la resta es :%d\n", resta);
+
+                if(numeroY>=1)
+                {
+                    division= calculoDivision(numeroX, numeroY);
+                    printf("c)La division es :%f\n", division);
+
+                }else{
+
+                    printf("no se puede dividir por 0\n");
+
+                }//if(numeroY>=1)
+
+                printf("d)La multiplicacion es: %d\n", multiplicacion);
+
+                printf("e)El factorial de A es: %d y ", factoreoX);
+
+                printf("el factorial de B es: %d\n", factoreoY);
+            }
+
             break;
         case 5:
             seguir = 'n';
             break;
         default:
-            printf("no ingrewso una opcion valida!!\n");
+            printf("no ingreso una opcion valida!!\n");
             break;
         }
         system("pause");
         system("cls");
     }while(seguir =='s');
-
-
-
-
-
-
-
-
-
-
-
-/*    numeroX= ingresarNumero();
-    numeroY= ingresarNumero();*/
-
-   /* suma= calculoSuma(numeroX, numeroY);
-    printf("la suma es :%d", suma); */
-
-    /*resta= calculoResta(numeroX, numeroY);
-    printf("la la resta es :%d", resta); */
-
-    /*division= calculoDivision(numeroX,numeroY);
-    printf("la division es :%d", division); -----------------------esta mal falta algo para que de con coma */
-
-    /*multiplicacion= calculoMultiplicacion(numeroX,numeroY);
-    printf("la multiplicacion es: %d", multiplicacion);*/
-
-
-    /*factoreo= factorial(numeroX);
-    printf("el resultado del factoreo es: %d", factoreo);----------------esta mal*/
-
 
 }

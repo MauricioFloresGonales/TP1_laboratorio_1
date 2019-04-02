@@ -36,13 +36,7 @@ float calculoDivision(int operandoA,int operandoB)
 {
     float resultado;
 
-    if(operandoB>=1)
-    {
-        resultado= (float) operandoA/operandoB;
-
-    }else{
-       resultado= printf("no se puede dividir por 0\n");
-    }
+    resultado= (float) operandoA/operandoB;
 
     return resultado;
 
