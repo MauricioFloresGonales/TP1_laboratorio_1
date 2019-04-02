@@ -1,11 +1,12 @@
 
+
 int ingresarNumero(void);
 
 int calculoSuma(int, int);
 
 int calculoResta(int, int);
 
-int calculoDivision(int, int );
+float calculoDivision(int, int );
 
 int calculoMultiplicacion(int ,int);
 

@@ -1,2 +1,0 @@
-
-int calculoResta(int, int);

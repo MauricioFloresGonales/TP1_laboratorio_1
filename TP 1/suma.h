@@ -1,2 +1,0 @@
-
-int calculoSuma(int, int);

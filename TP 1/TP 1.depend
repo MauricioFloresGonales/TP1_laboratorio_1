@@ -59,3 +59,15 @@
 
 1554159398 c:\users\pipoca\tp1_laboratorio_1\tp 1\suma.h
 
+1554170059 source:c:\users\pipoca\tp1_laboratorio_1\tp 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1554170609 source:c:\users\pipoca\tp1_laboratorio_1\tp 1\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1554170406 c:\users\pipoca\tp1_laboratorio_1\tp 1\funciones.h
+

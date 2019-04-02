@@ -1,2 +1,0 @@
-
-int calculoMultiplicacion(int ,int);
