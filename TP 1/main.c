@@ -63,14 +63,26 @@ int main()
                         printf("NO INGRESASTE (B)\n");
                     }else{
 
-                        printf("a) Calcular la suma (A+B)\nb) Calcular la resta (A-B)\nc) Calcular la division (A/B)\nd) Calcular la multiplicacion (A*B)\ne) Calcular el factorial (A!)\n");
+                        printf("a) Calcular la suma (%d+%d)\n",numeroX,numeroY);
+                        printf("b) Calcular la resta (%d-%d)\n",numeroX,numeroY);
+                        printf("c) Calcular la division (%d/%d)\n",numeroX,numeroY);
+                        printf("d) Calcular la multiplicacion (%d*%d)\n",numeroX,numeroY);
+                        printf("e) Calcular el factorial (%d!) y (%d!)\n",numeroX,numeroY);
+
                         suma= calculoSuma(numeroX, numeroY);
+
                         resta= calculoResta(numeroX, numeroY);
+
                         division= calculoDivision(numeroX, numeroY);
+
                         multiplicacion= calculoMultiplicacion(numeroX,numeroY);
+
                         factoreoX= factorial(numeroX);
+
                         factoreoY= factorial(numeroY);
+
                         paso3=1;
+
                     }//if(X==1 && Y==0
                 }//if(X==0 && Y==1)
             }//if(X==0 && Y==0)
@@ -79,31 +91,64 @@ int main()
         case 4:
             if(paso3==0)
             {
-                printf("No calsulaste las operaciones (operacion 3) o te falto agregar un dato.\n");
+                printf("No calculaste las operaciones (operacion 3) o te falto agregar un dato.\n");
 
             }else{
 
+//               SUMA:
+
                 printf("a)La suma es :%d\n", suma);
 
+//               RESTA:
+
                 printf("b)La la resta es :%d\n", resta);
+
+//              DIVISION:
 
                 if(numeroY>=1)
                 {
                     division= calculoDivision(numeroX, numeroY);
-                    printf("c)La division es :%f\n", division);
+
+                    printf("c)La division es :%.2f\n", division);
 
                 }else{
 
-                    printf("no se puede dividir por 0\n");
+                    printf("c)No se puede dividir por 0\n");
 
                 }//if(numeroY>=1)
 
+//              MULTIPLICACION:
+
                 printf("d)La multiplicacion es: %d\n", multiplicacion);
 
-                printf("e)El factorial de A es: %d y ", factoreoX);
+//              FACTORIZACION:
 
-                printf("el factorial de B es: %d\n", factoreoY);
-            }
+                if(numeroX==0)
+                {
+                    printf("e) No se puede factoriar por 0 y ");
+
+                }else{
+                    if(numeroX<0)
+                    {
+                        printf("e) No se puede factoriar un numero negativo y ");
+                    }else{
+                         printf("e)El factorial de A es: %d y ", factoreoX);
+                    }//if(numeroX<0)
+                }//if(numeroX==0)
+
+                if(numeroY==0)
+                {
+                    printf("no se puede factoriar por 0\n");
+
+                }else{
+                    if(numeroX<0)
+                    {
+                        printf("no se puede factoriar un numero negativo\n");
+                    }else
+
+                    printf("el factorial de B es: %d\n", factoreoY);
+                }//if(numeroY==0)
+            }//if(paso3==0)
 
             break;
         case 5:
